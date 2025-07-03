@@ -8,6 +8,7 @@ public class CheckGuest {
         String nomeUtente = scan.nextLine();
         boolean nomePresente = false;
 
+        // Caso col ciclo for
         for (int i = 0; i < invitati.length; i++) {
             
             if (invitati[i].equalsIgnoreCase(nomeUtente)) {
@@ -23,10 +24,20 @@ public class CheckGuest {
         }
 
 
-
-
-
-
+        // Caso col ciclo while
+        int i = 0;
+        while(i < invitati.length){
+            if (invitati[i].equalsIgnoreCase(nomeUtente)) {
+                nomePresente = true;
+                break;
+            }
+            i++;
+        }
+        if(nomePresente){
+            System.out.println("Sei in lista, benvenuto!");
+        }else{
+            System.out.println("Non sei in lista, tornatene a casa!");
+        }
 
     }
 }
