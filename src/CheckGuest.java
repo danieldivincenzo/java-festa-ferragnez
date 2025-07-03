@@ -1,5 +1,32 @@
+import java.util.Scanner;
 public class CheckGuest {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Scanner scan = new Scanner(System.in);
+        String[] invitati = {"Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
+
+        System.out.print("Inserisci il tuo nome e cognome: ");
+        String nomeUtente = scan.nextLine();
+        boolean nomePresente = false;
+
+        for (int i = 0; i < invitati.length; i++) {
+            
+            if (invitati[i].equalsIgnoreCase(nomeUtente)) {
+                nomePresente = true;
+                break;
+            }
+        }
+
+        if(nomePresente){
+            System.out.println("Sei in lista, benvenuto!");
+        }else{
+            System.out.println("Non sei in lista, tornatene a casa!");
+        }
+
+
+
+
+
+
+
     }
 }
